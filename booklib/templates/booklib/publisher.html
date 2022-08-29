@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Publisher List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Publishers:</legend>
+        {% if publisher_list %}
+        <ul>
+            {%for publisher in publisher_list%}
+            <li> Name: {{publisher.publisher_name}}</li>
+            <a href=publisher.publisher_site>{{publisher.publisher_site}}</a>
+            <hr>
+            {%endfor%}
+        </ul>
+        {%else%}
+        <p>No Publishers Available</p>
+        {%endif%}
+    </fieldset>
+</body>
+
+</html>

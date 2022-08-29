@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Books</legend>
+        {% if books_list %}
+        <div style="border-width: 10px; border-color: black; background-color: rgb(212, 224, 220); padding: 40px;">
+            {%for book in books_list%}
+            <p>Name : {{book.book_name}}</p>
+            <p>Author : {{book.author</p>
+            <p>Price : {{book.book_price}}</p>
+            <p>Publisher : {{book.publisher}}</p>
+            <hr>
+            {%endfor%}
+        </div>
+        {%else%}
+        <p>No Books Available</p>
+        {%endif%}
+    </fieldset>
+</body>
+
+</html>
